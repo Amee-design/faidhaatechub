@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { motion, HTMLMotionProps } from "framer-motion";
+
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "outline" | "ghost";
@@ -35,7 +35,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       className
     );
 
-    const MotionComponent = motion.button;
     // Simplify for now, just basic button with framer motion wrapper if needed, but for standard button use standard HTML
     // Integrating Link if href is present
 

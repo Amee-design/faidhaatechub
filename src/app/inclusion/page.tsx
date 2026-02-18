@@ -1,5 +1,4 @@
 import ReportingPortal from "@/components/sections/ReportingPortal";
-import Image from "next/image";
 
 export default function InclusionPage() {
   return (

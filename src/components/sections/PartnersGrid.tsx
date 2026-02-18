@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 const partners = [
   { name: "UNICEF", logo: "/partners/unicef.png" },

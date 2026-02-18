@@ -2,7 +2,7 @@
 
 import React from "react";
 import Section from "@/components/ui/Section";
-import { motion } from "framer-motion";
+
 import { Heart, Globe, Shield } from "lucide-react";
 
 const ICT4D = () => {

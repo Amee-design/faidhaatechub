@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import Section from "@/components/ui/Section";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import Button from "@/components/ui/Button";
 

@@ -13,7 +13,7 @@ import {
   BarElement,
   RadialLinearScale,
 } from "chart.js";
-import { Line, Bar, Radar } from "react-chartjs-2";
+import { Line,  Radar } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,

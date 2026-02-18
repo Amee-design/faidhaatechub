@@ -3,7 +3,7 @@
 import React from "react";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
-import { motion } from "framer-motion";
+
 import { Play } from "lucide-react";
 
 const CreativeStudio = () => {
