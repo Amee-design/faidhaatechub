@@ -30,7 +30,7 @@ export default function Join() {
               Scholarships available for women and PWDs.
             </p>
             <Button
-              href="https://forms.google.com/example"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeitjJJpXZRAY1GFJhTBl4MnkwI-IcDudHOAV-UzIW7tfQp4w/viewform?usp=dialog"
               variant="primary"
               className="group-hover:px-8"
             >
