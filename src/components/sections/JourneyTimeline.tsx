@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 const JourneyTimeline = () => {
   const milestones = [
-    { year: "2018", title: "Inception", desc: "Faidhaa Innovation Hub was founded with a mission to bridge the digital divide in Kano." },
-    { year: "2020", title: "First Cohort", desc: "Graduated the first set of 50 students in Basic Digital Literacy and Coding." },
-    { year: "2022", title: "Strategic Partnership", desc: "Secured partnership with NITDA to expand training facilities." },
+    { year: "2018", title: "Inception", desc: "Faidhaa Innovation Hub was founded with a mission to bridge the digital divide in Kaduna, Lagos, Kano, Abuja & Ilorin." },
+    { year: "2020", title: "First Cohort", desc: "Graduated the first set of 500 students in Basic Digital Literacy and Coding." },
+    { year: "2022", title: "Strategic Partnership", desc: "Secured partnership with UNIGO,UNIFPA, International IDEA, WHO, NITDA, UN Human Right to expand training facilities." },
     { year: "2023", title: "Animation Studio", desc: "Launched the Creative Studio to produce indigenous 3D content." },
     { year: "2024", title: "Impact Expansion", desc: "Reached 25,000+ youth across 12 states through hybrid programs." },
     { year: "2026", title: "The Future", desc: "Becoming the premier hub for inclusive innovation in West Africa." },

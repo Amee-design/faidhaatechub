@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Section from "@/components/ui/Section";
 import { motion, AnimatePresence } from "framer-motion";
 import { User, Code, PenTool, BarChart, ChevronDown } from "lucide-react";
@@ -13,6 +14,7 @@ const Organogram = () => {
       id: "ceo",
       title: "Founder & CEO",
       name: "Ameerah Muhammad Ashir",
+      image: "/leaders/ameerah.jpeg",
       icon: <User className="w-6 h-6" />,
       desc: "Sets the vision, drives strategic partnerships, and advocates for inclusive tech policies.",
       color: "bg-fih-hub-blue",
@@ -20,23 +22,26 @@ const Organogram = () => {
     {
       id: "cto",
       title: "Tech Lead / CTO",
-      name: "Ibrahim Sani",
+      name: "Daniel Ayeni",
+      image: "/leaders/daniel-ayeni.jpg",
       icon: <Code className="w-6 h-6" />,
       desc: "Oversees technical curriculum, software development projects, and infrastructure.",
       color: "bg-fih-impact-teal",
     },
     {
       id: "creative",
-      title: "Creative Director",
-      name: "Fatima Aliyu",
+      title: "M&E Officer",
+      name: "Fawaz Muhammad",
+      image: "/leaders/fawaz.jpeg",
       icon: <PenTool className="w-6 h-6" />,
-      desc: "Leads the animation studio, visual storytelling, and brand identity projects.",
+      desc: "Leads monitoring and evaluation efforts, impact storytelling, and communications.",
       color: "bg-fih-action-gold",
     },
     {
       id: "program",
-      title: "Program Manager",
-      name: "Musa Kabir",
+      title: "Program & Industrial Engagement Officer",
+      name: "Muhammed Ahmed",
+      image: "/leaders/ahmed.jpeg",
       icon: <BarChart className="w-6 h-6" />,
       desc: "Manages day-to-day operations, student cohorts, and impact monitoring.",
       color: "bg-purple-500",
@@ -61,14 +66,21 @@ const Organogram = () => {
             layout
             onClick={() => setActiveRole(activeRole === role.id ? null : role.id)}
             className={`cursor-pointer bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 ${
-              activeRole === role.id ? "w-full md:w-[600px] ring-2 ring-fih-hub-blue" : "w-64 hover:-translate-y-2 h-80"
+              activeRole === role.id ? "w-full md:w-[600px] ring-2 ring-fih-hub-blue" : "w-64 hover:-translate-y-2 h-auto"
             }`}
           >
             <div className={`h-2 ${role.color}`} />
-            <div className="p-6 flex flex-col items-center text-center h-full">
-               <div className={`w-16 h-16 rounded-full ${role.color}/10 flex items-center justify-center text-fih-deep-black mb-4`}>
-                 {role.icon}
+            <div className="p-6 flex flex-col items-center text-center">
+               {/* Leader Image */}
+               <div className="relative w-32 h-32 mb-4 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg">
+                 <Image
+                   src={role.image}
+                   alt={role.name}
+                   fill
+                   className="object-cover"
+                 />
                </div>
+               
                <h3 className="font-bold text-xl text-fih-deep-black mb-1">{role.title}</h3>
                <p className="text-fih-charcoal text-sm mb-4">{role.name}</p>
                
@@ -89,7 +101,7 @@ const Organogram = () => {
                  <motion.div 
                    animate={{ y: [0, 5, 0] }}
                    transition={{ duration: 2, repeat: Infinity }}
-                   className="mt-auto text-gray-400"
+                   className="mt-4 text-gray-400"
                  >
                    <ChevronDown size={20} />
                  </motion.div>

@@ -19,7 +19,7 @@ const ProjectPortfolio = () => {
       title: "Digital Health Initiative",
       client: "WHO / UNFPA",
       desc: "A telemedicine platform connecting rural health workers with specialists.",
-      image: "https://placehold.co/800x600/1A1A1A/00AEEF?text=Digital+Health",
+      image: "/company-images/R.jpeg",
       color: "border-fih-hub-blue",
     },
     {
@@ -27,7 +27,7 @@ const ProjectPortfolio = () => {
       title: "Pharma Tech Transformation",
       client: "UNIDO",
       desc: "Digitizing pharmaceutical production lines for local manufacturers.",
-      image: "https://placehold.co/800x600/1A1A1A/008080?text=Pharma+Tech",
+      image: "/company-images/OIP (1).webp",
       color: "border-fih-impact-teal",
     },
     {
@@ -35,37 +35,39 @@ const ProjectPortfolio = () => {
       title: "Inclusive STEM Fellowship",
       client: "Faidhaa Internal",
       desc: "A 6-month intensive bootcamp for women and PWDs in Data Science.",
-      image: "https://placehold.co/800x600/1A1A1A/FFD700?text=STEM+Fellowship",
+      image:
+        "/company-images/ict-and-computer-empowerment-training-for-women-in-Abuja-Nigeria.png.webp",
       color: "border-fih-action-gold",
     },
     {
-       id: 4,
-       title: "Agro-Tech Solutions",
-       client: "Local Farmers Co-op",
-       desc: "IoT sensors for soil monitoring and crop yield optimization.",
-       image: "https://placehold.co/800x600/1A1A1A/4ADE80?text=Agro+Tech",
-       color: "border-green-400",
-    }
+      id: 4,
+      title: "Agro-Tech Solutions",
+      client: "Local Farmers Co-op",
+      desc: "IoT sensors for soil monitoring and crop yield optimization.",
+      image: "/company-images/OIP (2).webp",
+      color: "border-green-400",
+    },
   ];
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-fih-deep-black">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-16 px-16">
-           {/* Intro Card */}
-           <div className="min-w-[400px] md:min-w-[600px] flex flex-col justify-center">
-             <h2 className="text-5xl md:text-7xl font-bold font-display text-white mb-6">
-               Our <br/> <span className="text-fih-impact-teal">Impact</span> <br/> Projects
-             </h2>
-             <p className="text-fih-silver text-xl mb-8">
-               Scroll to explore how we are changing lives through technology.
-             </p>
-             <div className="flex gap-2">
-               <div className="w-12 h-1 bg-white/20 rounded-full animate-pulse" />
-               <div className="w-4 h-1 bg-white/20 rounded-full" />
-               <div className="w-4 h-1 bg-white/20 rounded-full" />
-             </div>
-           </div>
+          {/* Intro Card */}
+          <div className="min-w-[400px] md:min-w-[600px] flex flex-col justify-center">
+            <h2 className="text-5xl md:text-7xl font-bold font-display text-white mb-6">
+              Our <br /> <span className="text-fih-impact-teal">Impact</span>{" "}
+              <br /> Projects
+            </h2>
+            <p className="text-fih-silver text-xl mb-8">
+              Scroll to explore how we are changing lives through technology.
+            </p>
+            <div className="flex gap-2">
+              <div className="w-12 h-1 bg-white/20 rounded-full animate-pulse" />
+              <div className="w-4 h-1 bg-white/20 rounded-full" />
+              <div className="w-4 h-1 bg-white/20 rounded-full" />
+            </div>
+          </div>
 
           {projects.map((project) => (
             <div
@@ -86,7 +88,11 @@ const ProjectPortfolio = () => {
                 <p className="text-white/80 text-lg max-w-xl mb-8">
                   {project.desc}
                 </p>
-                <Button href={`/projects/${project.id}`} variant="outline" className="w-fit">
+                <Button
+                  href={`/projects/${project.id}`}
+                  variant="outline"
+                  className="w-fit"
+                >
                   View Case Study
                 </Button>
               </div>
