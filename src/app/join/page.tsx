@@ -1,12 +1,47 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import AccessibilityWidget from "@/components/ui/AccessibilityWidget";
 import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Join() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleWhatsAppMessage = () => {
+    const { name, email, message } = formData;
+
+    // Validate that all fields are filled
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      alert("Please fill in all fields");
+      return;
+    }
+
+    // Create the WhatsApp message
+    const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+    // WhatsApp API URL
+    const whatsappUrl = `https://wa.me/2348184031178?text=${whatsappMessage}`;
+
+    // Open WhatsApp in a new window
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="flex flex-col">
       <Section className="py-20 bg-fih-deep-black text-center min-h-[50vh] flex flex-col justify-center">
@@ -120,6 +155,9 @@ export default function Join() {
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   className="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-fih-hub-blue focus:border-transparent outline-none"
                   placeholder="Your Name"
                 />
@@ -130,6 +168,9 @@ export default function Join() {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   className="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-fih-hub-blue focus:border-transparent outline-none"
                   placeholder="your@email.com"
                 />
@@ -139,14 +180,21 @@ export default function Join() {
                   Message
                 </label>
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   rows={4}
                   className="w-full p-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-fih-hub-blue focus:border-transparent outline-none"
                   placeholder="How can we help?"
                 ></textarea>
               </div>
-              <Button type="button" className="w-full justify-center">
-                Send Message
-              </Button>
+              <button
+                type="button"
+                onClick={handleWhatsAppMessage}
+                className="w-full bg-fih-hub-blue hover:bg-fih-hub-blue/90 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+              >
+                Send via WhatsApp <ArrowRight size={16} />
+              </button>
             </div>
           </form>
         </div>
