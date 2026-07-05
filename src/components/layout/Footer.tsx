@@ -55,33 +55,36 @@ const Footer = () => {
       <div className="container mx-auto px-6 md:px-12">
         {/* SDG Tracker */}
         <div className="mb-16">
-          <h3 className="text-xl font-bold mb-8 text-center uppercase tracking-widest text-fih-silver">
-            Contributing to Sustainable Development Goals
+          <p className="text-fih-hub-blue text-center uppercase tracking-widest text-xs md:text-sm font-bold mb-2">
+            Aligned With Global Goals
+          </p>
+          <h3 className="text-xl md:text-2xl font-bold mb-8 text-center text-white font-display">
+            Contributing to the UN Sustainable Development Goals
           </h3>
-          <div className="flex flex-wrapjustify-center gap-4 justify-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 md:gap-4 [&>*:last-child]:col-span-2 md:[&>*:last-child]:col-span-1">
             {sdgs.map((sdg) => (
               <div
                 key={sdg.number}
-                className="group relative flex flex-col items-center p-2 transition-transform hover:-translate-y-2 cursor-pointer w-24"
+                className="group rounded-2xl border border-white/10 bg-white/5 p-4 flex flex-col gap-2 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--sdg-color)]"
+                style={{ "--sdg-color": sdg.color } as React.CSSProperties}
               >
                 <div
-                  className="w-16 h-16 rounded-lg flex items-center justify-center font-bold text-2xl text-white shadow-lg mb-2 z-10 relative overflow-hidden"
+                  className="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-base text-white shrink-0"
                   style={{ backgroundColor: sdg.color }}
                 >
-                  <span className="z-10">{sdg.number}</span>
-                  {/* Hover overlay effect */}
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  {sdg.number}
                 </div>
-                <div className="opacity-0 group-hover:opacity-100 absolute -bottom-16 left-1/2 -translate-x-1/2 w-48 bg-white/10 backdrop-blur-md p-3 rounded-lg text-center pointer-events-none transition-opacity z-20 shadow-xl border border-white/10">
+                <div>
                   <p
-                    className="text-xs font-bold text-white mb-1"
+                    className="text-[11px] font-bold uppercase tracking-wider mb-1"
                     style={{ color: sdg.color }}
                   >
+                    SDG {sdg.number}
+                  </p>
+                  <h4 className="text-sm font-bold text-white mb-1 leading-snug">
                     {sdg.title}
-                  </p>
-                  <p className="text-[10px] text-gray-300 leading-tight">
-                    {sdg.desc}
-                  </p>
+                  </h4>
+                  <p className="text-xs text-fih-silver leading-snug">{sdg.desc}</p>
                 </div>
               </div>
             ))}

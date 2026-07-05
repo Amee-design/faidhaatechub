@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat, Noto_Sans, Oswald } from "next/font/google";
+import { Noto_Sans, Oswald } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
 const notoSans = Noto_Sans({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-noto-sans" });
 const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
 
@@ -21,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${montserrat.variable} ${notoSans.variable} ${oswald.variable} font-sans bg-fih-deep-black text-fih-inclusive-white flex flex-col min-h-screen selection:bg-fih-hub-blue selection:text-white`}>
+      <body className={`${notoSans.variable} ${oswald.variable} font-sans bg-fih-deep-black text-fih-inclusive-white flex flex-col min-h-screen selection:bg-fih-hub-blue selection:text-white`}>
         <Navbar />
         <main className="flex-grow flex flex-col relative w-full overflow-hidden">
           {children}
