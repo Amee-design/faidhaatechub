@@ -23,8 +23,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-noto-sans)", "sans-serif"],
-        heading: ["var(--font-montserrat)", "var(--font-inter)", "sans-serif"],
-        display: ["var(--font-oswald)", "sans-serif"], 
+        display: ["var(--font-oswald)", "sans-serif"],
       },
       borderRadius: {
         "3xl": "24px", 
