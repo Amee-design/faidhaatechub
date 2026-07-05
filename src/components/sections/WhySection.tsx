@@ -19,16 +19,21 @@ const WhySection = () => {
         >
           <div className="flex items-center gap-2 mb-4">
             <div className="h-[2px] w-12 bg-fih-hub-blue" />
-            <span className="text-fih-hub-blue uppercase tracking-widest text-sm font-bold">Why We Exist</span>
+            <span className="text-fih-hub-blue uppercase tracking-widest text-sm font-bold">Who We Are</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-6">
-            The Intersection of <span className="text-fih-impact-teal">STEM</span> & <span className="text-fih-action-gold">Inclusion</span>
+            Building <span className="text-fih-impact-teal">AI Systems</span> for <span className="text-fih-action-gold">African Markets</span>
           </h2>
           <p className="text-fih-silver text-lg mb-6 leading-relaxed">
-            At Faidhaa Innovation Hub, we believe that technology is the great equalizer. We are bridging the gap for women, people with disabilities, and underserved youth in Northern Nigeria.
+            Faidhaa Innovation Hub is an AI-powered innovation company developing
+            intelligent software, automation tools, and digital platforms that help
+            businesses, governments, startups, NGOs, and educational institutions
+            operate more efficiently, decide smarter, and scale sustainably.
           </p>
           <p className="text-fih-silver text-lg mb-8 leading-relaxed">
-            From 3D animation to data science, we provide the tools, mentorship, and platform to turn potential into impact.
+            We design affordable, scalable, and locally relevant AI solutions for
+            African markets while maintaining global standards &mdash; practical
+            technology built to deliver measurable business and social impact.
           </p>
           <Button href="/about" variant="secondary">
             Read Our Story
@@ -49,9 +54,9 @@ const WhySection = () => {
           <div className="absolute inset-0 flex rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-fih-deep-black">
             {/* Left Half - 3D Character (Placeholder) */}
             <div className="w-1/2 relative bg-fih-deep-black flex items-center justify-center overflow-hidden group">
-               <div className="absolute inset-0 bg-[url('https://placehold.co/600x800/1A1A1A/00AEEF?text=3D+Model')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
+               <div className="absolute inset-0 bg-[url('https://placehold.co/600x800/1A1A1A/00AEEF?text=AI+Systems')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                 <span className="text-white font-bold">Future Skills</span>
+                 <span className="text-white font-bold">AI Systems</span>
                </div>
             </div>
 

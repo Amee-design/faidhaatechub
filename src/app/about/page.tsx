@@ -1,4 +1,5 @@
 import React from "react";
+import CompanyOverview from "@/components/sections/CompanyOverview";
 import FounderStory from "@/components/sections/FounderStory";
 import Organogram from "@/components/sections/Organogram";
 import JourneyTimeline from "@/components/sections/JourneyTimeline";
@@ -14,10 +15,12 @@ export default function About() {
            Who We Are
          </h1>
          <p className="text-fih-silver max-w-2xl mx-auto text-lg">
-           Driving innovation through inclusion, empowerment, and technology.
+           Africa&apos;s next AI technology company &mdash; building intelligent,
+           locally relevant systems that scale.
          </p>
        </Section>
 
+      <CompanyOverview />
       <FounderStory />
       <Organogram />
       <JourneyTimeline />

@@ -1,8 +1,11 @@
 import React from "react";
 import Section from "@/components/ui/Section";
-import ICTAcademy from "@/components/sections/ICTAcademy";
-import CreativeStudio from "@/components/sections/CreativeStudio";
-import ICT4D from "@/components/sections/ICT4D";
+import AITransformationSection from "@/components/sections/AITransformationSection";
+import AIProductsSection from "@/components/sections/AIProductsSection";
+import CybersecuritySection from "@/components/sections/CybersecuritySection";
+import BrandingIntelligenceSection from "@/components/sections/BrandingIntelligenceSection";
+import MediaProductionSection from "@/components/sections/MediaProductionSection";
+import ManagedTechSection from "@/components/sections/ManagedTechSection";
 import AccessibilityWidget from "@/components/ui/AccessibilityWidget";
 
 export default function Services() {
@@ -14,13 +17,18 @@ export default function Services() {
            Our Services
          </h1>
          <p className="text-fih-silver max-w-2xl mx-auto text-lg">
-           Comprehensive solutions tailored for impact, innovation, and growth.
+           A next-generation AI-powered Digital Transformation, Cybersecurity &amp; Managed
+           Technology Partner &mdash; helping organizations build, secure, scale, and optimize
+           their entire digital ecosystem.
          </p>
        </Section>
 
-      <ICTAcademy />
-      <CreativeStudio />
-      <ICT4D />
+      <AITransformationSection />
+      <AIProductsSection />
+      <CybersecuritySection />
+      <BrandingIntelligenceSection />
+      <MediaProductionSection />
+      <ManagedTechSection />
       <AccessibilityWidget />
     </div>
   );
