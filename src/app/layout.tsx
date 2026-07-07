@@ -20,6 +20,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PL6RE18JND" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-PL6RE18JND');`,
+          }}
+        />
+        {/* End Google tag (gtag.js) */}
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
